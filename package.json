@@ -13,9 +13,19 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"autoprefixer": "^10.4.7",
+		"postcss": "^8.4.14",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
-		"svelte": "^3.44.0"
+		"svelte": "^3.44.0",
+		"svelte-preprocess": "^4.10.6",
+		"tailwindcss": "^3.0.24"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@jest/globals": "^27.4.2",
+		"@uppy/core": "^2.3.0",
+		"@uppy/transloadit": "^2.3.0",
+		"dayjs": "^1.11.3"
+	}
 }
