@@ -28,17 +28,10 @@
 
 	const handleGetIdToken = async () => {
 		const res = await getIdToken(params.code);
-		const { id_token, error } = res;
+		const { id_token } = res;
 		if (id_token) {
 			$idToken = res.id_token;
 			goto('/upload');
-		}
-
-		if (error) {
-			$result = {
-				success: true,
-				error: false
-			};
 		}
 	};
 </script>

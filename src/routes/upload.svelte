@@ -59,7 +59,7 @@
 						text: [
 							{
 								text: `${watermarkName} \n ${watermarkDate}`,
-								size: 48,
+								size: 36,
 								font: 'Work-Sans-ExtraBold',
 								color: '#FFFFFF',
 								stroke_width: 1,
