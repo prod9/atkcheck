@@ -75,8 +75,14 @@
 						use: 'date_watermarked',
 						robot: '/image/optimize'
 					},
-					export: {
+					converted: {
 						use: 'optimized',
+						robot: '/image/resize',
+						format: 'png',
+						imagemagick_stack: 'v2.0.7'
+					},
+					export: {
+						use: 'converted',
 						robot: '/minio/store',
 						credentials: 'minio_bucket_credentials'
 					}
@@ -140,7 +146,7 @@
 			name="ATK"
 			style="display:none"
 			type="file"
-			accept=".jpg, .jpeg, .png, .heic"
+			accept=".jpg, .jpeg, .png"
 			on:change={(e) => onFileUpload(e)}
 			bind:this={fileinput}
 			required
