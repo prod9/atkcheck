@@ -33,9 +33,9 @@
 	onMount(async () => {
 		document.body.style.background = 'linear-gradient(180deg, #e9fbff 0%, #2e12c4 65.62%)';
 
-		if (history.length > 0) {
-			goto('/thankyou');
-		}
+		// if (history.length > 0) {
+		// 	goto('/thankyou');
+		// }
 	});
 
 	let fileinput;
@@ -78,7 +78,7 @@
 					converted: {
 						use: 'optimized',
 						robot: '/image/resize',
-						format: 'png',
+						format: 'jpg',
 						imagemagick_stack: 'v2.0.7'
 					},
 					export: {
