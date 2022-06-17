@@ -1,38 +1,60 @@
-# create-svelte
+# ATKCheck
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Web for upload ATK and sent information to discord channel and google sheet .
+https://atkcheck.prodigy9.co/
 
-## Creating a project
+## 🚀 Getting start
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Install [pnpm](https://pnpm.io/)
+- Clone the project
+- create `.env` and copy `.env.example`
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# create google OAuth access credentials
+VITE_GOOGLE_CLIENT_ID=""
+VITE_GOOGLE_CLIENT_SECRET=""
+VITE_GOOGLE_OAUTH_REDIRECT_URL="http://localhost:3000"
+# copy id from google sheet
+VITE_GOOGLE_SHEET_ID=""
+# create script in google sheet script app, deploy and get script url
+VITE_GOOGLE_SCRIPT_URL=""
+# discord webhook url
+VITE_DISCORD_WEBHOOK_URL=""
+# transloadit auth key
+VITE_TRANSLOADIT_AUTH=""
 ```
 
-## Building
+- run `pnpm install` to install dependencies
+
+## 💻 Developing
+
+```bash
+pnpm run dev
+
+# or start and expose server to other devices on this network
+
+pnpm run dev --host
+```
+
+## 🏠 Building
 
 To create a production version of your app:
 
 ```bash
-npm run build
+
+pnpm run build
+
 ```
 
-You can preview the production build with `npm run preview`.
+## 🌍 Deploy
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Push to the `main` branch to deploy on production.
+
+## 📝 References
+
+- [Sveltekit](https://kit.svelte.dev/)
+- [Google create access credentials](https://developers.google.com/workspace/guides/create-credentials)
+- [Google App script](https://developers.google.com/apps-script/samples)
+- [learn-to-send-email-via-google-script-html-no-server](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server)
+- [Transloadit](https://transloadit.com/)
+- [Discord Webhook](https://discord.com/developers/docs/resources/webhook)
