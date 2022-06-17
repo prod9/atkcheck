@@ -36,6 +36,10 @@
 	};
 </script>
 
+<svelte:head>
+	<meta name="theme-color" content="#e9fbff" />
+</svelte:head>
+
 <section class="flex flex-col h-full justify-between">
 	<div>
 		<img class="logo" src="logo.svg" alt="prodigy9-atk-check" />

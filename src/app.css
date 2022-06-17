@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 :root {
+	--app-height: 100vh;
 	--space-margin: 56px;
 }
 
 body {
 	font-family: 'Work Sans', sans-serif;
-	height: calc(100vh - var(--space-margin));
 	max-width: 320px;
 	color: white;
-	margin: 56px auto 0px auto;
+	padding-top: 56px;
+	margin: 0px auto;
 	background: black;
 }
 

@@ -57,10 +57,20 @@
 	import LoadingPage from '$lib/pages/LoadingPage.svelte';
 	import SuccessPage from '../lib/pages/SuccessPage.svelte';
 	import ErrorPage from '../lib/pages/ErrorPage.svelte';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const appHeight = () => {
+			const doc = document.documentElement;
+			doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+		};
+		window.addEventListener('resize', appHeight);
+		appHeight();
+	});
 </script>
 
 <main class="w-full flex">
-	<div class="w-full pt-10 pb-24">
+	<div class="w-full pt-5 pb-16">
 		{#if $navigating || $isLoading}
 			<LoadingPage />
 		{:else if $result.success}
@@ -75,6 +85,6 @@
 
 <style>
 	main {
-		height: calc(100vh - var(--space-margin));
+		min-height: calc(var(--app-height) - var(--space-margin));
 	}
 </style>

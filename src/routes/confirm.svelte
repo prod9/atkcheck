@@ -40,12 +40,16 @@
 	};
 </script>
 
+<svelte:head>
+	<meta name="theme-color" content="#e9fbff" />
+</svelte:head>
+
 <section class="flex flex-col h-full justify-between">
-	<div class="mt-20">
+	<div>
 		<img class=" border-8 rounded" src={$confirmPicture} alt="ATK" />
 	</div>
 
-	<div>
+	<div class="mt-5">
 		<div class="mb-4">
 			<p class="font-bold">Step 3 of 3</p>
 			<p>Check the information above and tap the button to confirm.</p>

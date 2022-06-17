@@ -19,6 +19,10 @@
 	});
 </script>
 
+<svelte:head>
+	<meta name="theme-color" content="#e9fbff" />
+</svelte:head>
+
 <div class="flex flex-col items-center">
 	<img
 		alt="sorry"

@@ -33,9 +33,9 @@
 	onMount(async () => {
 		document.body.style.background = 'linear-gradient(180deg, #e9fbff 0%, #2e12c4 65.62%)';
 
-		// if (history.length > 0) {
-		// 	goto('/thankyou');
-		// }
+		if (history.length > 0) {
+			goto('/thankyou');
+		}
 	});
 
 	let fileinput;
@@ -127,6 +127,10 @@
 		});
 	};
 </script>
+
+<svelte:head>
+	<meta name="theme-color" content="#e9fbff" />
+</svelte:head>
 
 <section class="flex flex-col h-full justify-between">
 	<div class="flex justify-center mt-20">

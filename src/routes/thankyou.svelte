@@ -1,3 +1,7 @@
+<svelte:head>
+	<meta name="theme-color" content="#000000" />
+</svelte:head>
+
 <div class="flex justify-center items-center h-full">
 	<div class="flex flex-col items-center">
 		<div class="waviy text-4xl font-bold mb-5">
