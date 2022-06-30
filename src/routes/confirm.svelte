@@ -30,12 +30,13 @@
 				};
 				sendDiscordMessage($user.name, $confirmPicture);
 			})
-			.catch((error) => {
+			.catch((err) => {
 				$isLoading = false;
 				$result = {
 					success: false,
 					error: true
 				};
+				throw Error('Submit GoogleSheet Error', err);
 			});
 	};
 </script>

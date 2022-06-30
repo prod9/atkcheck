@@ -9,7 +9,7 @@ const getIdToken = async (code) => {
 			return resJson;
 		})
 		.catch((err) => {
-			return err;
+			throw Error('getIdToken Error', err);
 		});
 	return data;
 };

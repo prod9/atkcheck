@@ -9,7 +9,7 @@ const getDataFromSheet = async (email) => {
 			return resJson;
 		})
 		.catch((err) => {
-			return err;
+			throw Error('getDataFromSheet Error', err);
 		});
 	return data;
 };

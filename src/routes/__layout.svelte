@@ -58,6 +58,9 @@
 	import SuccessPage from '../lib/pages/SuccessPage.svelte';
 	import ErrorPage from '../lib/pages/ErrorPage.svelte';
 	import { onMount } from 'svelte';
+	import * as Sentry from '@sentry/browser';
+	import { BrowserTracing } from '@sentry/tracing';
+	import { variables } from '$lib/shared/variables';
 
 	onMount(() => {
 		const appHeight = () => {
@@ -66,6 +69,12 @@
 		};
 		window.addEventListener('resize', appHeight);
 		appHeight();
+
+		Sentry.init({
+			dsn: variables.sentryDSN,
+			integrations: [new BrowserTracing()],
+			tracesSampleRate: 1.0
+		});
 	});
 </script>
 

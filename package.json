@@ -24,6 +24,8 @@
 	"type": "module",
 	"dependencies": {
 		"@jest/globals": "^27.4.2",
+		"@sentry/browser": "^7.3.1",
+		"@sentry/tracing": "^7.3.1",
 		"@uppy/core": "^2.3.0",
 		"@uppy/transloadit": "^2.3.0",
 		"dayjs": "^1.11.3"

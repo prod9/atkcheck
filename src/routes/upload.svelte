@@ -119,9 +119,9 @@
 				});
 			} catch (err) {
 				if (err.isRestriction) {
-					console.log('Restriction error:', err);
+					throw Error('Restriction error:', err);
 				} else {
-					console.error(err);
+					throw Error('Upload Error', err);
 				}
 			}
 		});
