@@ -1,4 +1,4 @@
-const getDataFromSheet = async (email) => {
+const getDataFromSheet = async (url, email) => {
 	const body = { email: email };
 	const data = await fetch('/api/history', {
 		method: 'POST',
@@ -9,7 +9,7 @@ const getDataFromSheet = async (email) => {
 			return resJson;
 		})
 		.catch((err) => {
-			throw Error('getDataFromSheet Error', err);
+			return err
 		});
 	return data;
 };
